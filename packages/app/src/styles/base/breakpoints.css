@@ -1,0 +1,13 @@
+$bp-xs: 520px;
+$bp-sm: 768px;
+$bp-md: 1024px;
+$bp-lg: 1280px;
+$bp-xl: 1640px;
+
+/* values come from Radix! */
+
+@custom-media --xs (min-width: $bp-xs);
+@custom-media --sm (min-width: $bp-sm);
+@custom-media --md (min-width: $bp-md);
+@custom-media --lg (min-width: $bp-lg);
+@custom-media --xl (min-width: $bp-xl);
