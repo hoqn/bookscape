@@ -1,12 +1,17 @@
 {
-  "name": "root",
+  "name": "@chaekmoi/monorepo",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@types/node": "^20.11.0",
     "lerna": "^8.0.1",
-    "nx": "17.2.8"
+    "nx": "17.2.8",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "dev": "nx dev app"
   },
   "version": "0.0.0",
   "packageManager": "yarn@4.0.2"
