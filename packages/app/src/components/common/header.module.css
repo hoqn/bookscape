@@ -37,11 +37,11 @@ $HEADER_HEIGHT: 4rem;
   background-color: transparent;
 
   &:hover {
-    background-color: color-base(700, .1);
+    background-color: color-base(500, .1);
   }
   
   &:active {
-    background-color: color-base(700, .2);
+    background-color: color-base(500, .2);
   }
 }
 
