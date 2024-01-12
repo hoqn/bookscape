@@ -1,0 +1,71 @@
+/* === Header === */
+
+$HEADER_HEIGHT: 4rem;
+
+.header {
+  composes: transition from global;
+  height: $HEADER_HEIGHT;
+  background-color: color-base(50);
+}
+
+.header--layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header--top {
+  background-color: transparent;
+}
+
+.header__inner {
+  composes: container container--responsive mx-auto from global;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+}
+
+.header__back-btn {
+  composes: transition from global;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: color-base(500, .1);
+  }
+  
+  &:active {
+    background-color: color-base(500, .2);
+  }
+}
+
+.header__content {
+  composes: px-6 from global;
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__title {
+  composes: transition from global;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header--top .header__title {
+  font-size: 1.5rem;
+}
+
+/* === Header Placeholder === */
+
+.header-placeholder {
+  height: $HEADER_HEIGHT;
+}
