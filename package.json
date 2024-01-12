@@ -11,7 +11,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "dev": "nx dev app"
+    "dev": "nx dev app",
+    "build": "nx build app"
   },
   "version": "0.0.0",
   "packageManager": "yarn@4.0.2"
