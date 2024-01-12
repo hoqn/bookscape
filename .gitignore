@@ -18,3 +18,5 @@ node_modules/
 
 # and uncomment the following lines
 # .pnp.*
+
+.vercel
