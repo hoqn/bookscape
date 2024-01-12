@@ -1,0 +1,81 @@
+/* === Main Nav === */
+
+.main-nav {
+  display: block;
+  height: 4rem;
+  color: color-base(950);
+  background-color: color-base(50);
+  box-shadow:
+    0 -1px 0 0 color-base(200),
+    0 -1px 12px 0 rgb(12 12 12 / .1);
+}
+
+.main-nav__inner {
+  composes: container container--md mx-auto px-4 from global;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+}
+
+.main-nav__item {
+  flex: 1;
+}
+
+/* === Main Nav Item === */
+
+.item {
+  composes: transition from global;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: .25rem;
+  border-radius: .5rem;
+  background-color: inherit;
+  text-align: center;
+  
+  &:hover {
+    background-color: color-base(100);
+  }
+
+  &:active {
+    background-color: color-base(200);
+    transform: scale(.98);
+    
+    >.item__icon>span {
+      transition: inherit;
+      font-weight: 200;
+    }
+    >.item__label {
+      font-weight: 400;
+    }
+  }
+}
+
+.item--selected {
+  color: color-primary(950);
+  background-color: color-primary(700, .2);
+
+  &:hover, &:active {
+    background-color: color-primary(700, .3);
+  }
+  /* &:active {
+    background-color: color-primary(700, .45);
+  } */
+
+  >.item__icon>span {
+    font-variation-settings: 'FILL' 1;
+  }
+}
+
+.item__icon {
+  composes: transition from global;
+  >span {
+    transition: inherit;
+  }
+}
+
+.item__label {
+  font-size: .750rem;
+  font-weight: 500;
+}

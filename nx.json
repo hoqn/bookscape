@@ -1,7 +1,0 @@
-{
-  "targetDefaults": {},
-  "affected": {
-    "defaultBase": "master"
-  },
-  "neverConnectToCloud": true
-}
