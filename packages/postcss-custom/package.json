@@ -1,0 +1,12 @@
+{
+  "name": "@chaekmoi/postcss-custom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hogyun Jeon <akzm9999@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "files": [
+    "postcss.config.js"
+  ],
+  "devDependencies": {}
+}

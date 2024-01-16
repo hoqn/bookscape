@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
@@ -16,14 +16,15 @@
     "framer-motion": "^10.18.0",
     "material-symbols": "^0.14.5",
     "next": "^14.0.4",
+    "pretendard": "^1.3.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "the-new-css-reset": "^1.11.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@chaekmoi/postcss-custom": "*",
     "@chaekmoi/eslint-config": "*",
+    "@chaekmoi/postcss-custom": "*",
     "@chaekmoi/typescript-config": "*",
     "@next/eslint-plugin-next": "^14.0.4",
     "@types/eslint": "^8.56.1",
