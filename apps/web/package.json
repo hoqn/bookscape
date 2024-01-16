@@ -3,21 +3,29 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@repo/ui": "*",
+    "@chaekmoi/ui": "*",
+    "@tanstack/react-query": "^5.17.12",
+    "axios": "^1.6.5",
+    "clsx": "^2.1.0",
+    "framer-motion": "^10.18.0",
+    "material-symbols": "^0.14.5",
     "next": "^14.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "the-new-css-reset": "^1.11.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@chaekmoi/postcss-custom": "*",
+    "@chaekmoi/eslint-config": "*",
+    "@chaekmoi/typescript-config": "*",
     "@next/eslint-plugin-next": "^14.0.4",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@types/eslint": "^8.56.1",
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",

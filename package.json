@@ -1,5 +1,5 @@
 {
-  "name": "chaekmoi",
+  "name": "@chaekmoi/monorepo",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,10 +8,18 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@chaekmoi/eslint-config": "*",
+    "@chaekmoi/typescript-config": "*",
     "prettier": "^3.1.1",
-    "turbo": "latest"
+    "turbo": "latest",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "postcss-calc": "^9.0.1",
+    "postcss-custom-media": "^10.0.2",
+    "postcss-functions": "^4.0.2",
+    "postcss-nesting": "^12.0.2",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript-plugin-css-modules": "^5.0.2"
   },
   "engines": {
     "node": ">=18"
