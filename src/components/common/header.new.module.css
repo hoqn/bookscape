@@ -1,0 +1,125 @@
+@import "@/styles/base/breakpoints";
+
+$HEADER_HEIGHT: 4rem;
+
+/* === Header === */
+
+.header {
+  composes: transition from global;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  height: $HEADER_HEIGHT;
+  max-height: 0;
+  /* background-color: color-base(50, .75);
+  backdrop-filter: blur(12px); */
+}
+
+.header--top {
+  backdrop-filter: none;
+  background-color: transparent;
+}
+
+/* === Main Part === */
+
+.main {
+  height: $HEADER_HEIGHT;
+
+}
+
+.main__inner {
+  composes: container container--responsive mx-auto from global;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.main__lead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $HEADER_HEIGHT;
+  height: $HEADER_HEIGHT;
+  margin-right: -1.5rem;
+}
+
+.main__lead-action {
+  composes: transition from global;
+  padding: .5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color-base(500, .1);
+  }
+  
+  &:active {
+    background-color: color-base(500, .5);
+  }
+}
+
+.main__content {
+  composes: px-6 from global;
+}
+
+.main__trail {
+
+}
+
+.main__trail-action {
+
+}
+
+.main__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* === Expanded Part === */
+
+.exp {
+  composes: px-6 from global;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: $HEADER_HEIGHT;
+}
+
+.exp__title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* === Scrollable Area === */
+
+.scrollable {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  margin-top: $HEADER_HEIGHT;
+  padding-top: $HEADER_HEIGHT;
+  background-color: color-base(50, .75);
+  box-shadow:
+  0 1px 0 0 color-base(100);
+  backdrop-filter: blur(12px);
+  
+  .header--top.header--transparent+& {
+    background-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+}
+
+/* === Subheader Part === */
+
+.sub {
+  /* position: sticky; */
+  /* padding-top: $HEADER_HEIGHT; */
+  padding-bottom: .5rem;
+}

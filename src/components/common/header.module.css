@@ -1,15 +1,25 @@
-/* === Header === */
-
 $HEADER_HEIGHT: 4rem;
+
+/* === Header Wrapper === */
+
+.header-wrapper {
+
+}
+
+/* === Header === */
 
 .header {
   composes: transition from global;
-  height: $HEADER_HEIGHT;
-  background-color: color-base(50);
+  min-height: $HEADER_HEIGHT;
+  background-color: color-base(50, .8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-base(200);
+  /* box-shadow: 
+    0 2px 12px 0 rgb(12 12 12 / .2); */
 }
 
 .header--layout {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -17,17 +27,27 @@ $HEADER_HEIGHT: 4rem;
 
 .header--top {
   background-color: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+
+.header--large-title {
+  /* min-height: calc($HEADER_HEIGHT * 2); */
 }
 
 .header__inner {
-  composes: container container--responsive mx-auto from global;
+  composes: container container--sm mx-auto px-6 from global;
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
-  height: 100%;
+  align-items: center;
+  height: $HEADER_HEIGHT;
 }
 
 .header__back-btn {
   composes: transition from global;
+  position: relative;
+  left: -1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +55,7 @@ $HEADER_HEIGHT: 4rem;
   height: 3rem;
   border-radius: 9999px;
   background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     background-color: color-base(500, .1);
@@ -46,7 +67,6 @@ $HEADER_HEIGHT: 4rem;
 }
 
 .header__content {
-  composes: px-6 from global;
   flex: 1;
   display: flex;
   flex-flow: row nowrap;
@@ -60,8 +80,24 @@ $HEADER_HEIGHT: 4rem;
   font-weight: 700;
 }
 
-.header--top .header__title {
+.header--top.header--large-title {
+  min-height: calc($HEADER_HEIGHT * 2);
+}
+
+.header--top.header--large-title .header__title {
+  transform: translate(-3rem, $HEADER_HEIGHT);
   font-size: 1.5rem;
+}
+
+/* === Subheader === */
+
+.header__sub {
+  composes: container container--sm mx-auto transition from global;
+  padding: 0 1rem .5rem 1rem;
+}
+
+.header--top.header--large-title .header__sub {
+  transform: translate(0, $HEADER_HEIGHT);
 }
 
 /* === Header Placeholder === */

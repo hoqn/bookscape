@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren {}
 
 export default function MainLayout({ children }: Props) {
   return (
-    <>
+    <div className={$["wrapper"]}>
       <div className={$["safe-area"]}>{children}</div>
       <MainNavigation className={$["main-nav"]} navItems={[
         {
@@ -19,8 +19,8 @@ export default function MainLayout({ children }: Props) {
         {
           slug: "/search",
           icon: "search",
-          shortName: "검색",
-          fullName: "책 검색",
+          shortName: "찾기",
+          fullName: "책 찾기",
         },
         {
           slug: "/shelf",
@@ -29,6 +29,6 @@ export default function MainLayout({ children }: Props) {
           fullName: "나의 책장",
         },
       ]} />
-    </>
+    </div>
   );
 }

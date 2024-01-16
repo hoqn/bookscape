@@ -16,6 +16,11 @@ export default function MainNavigation({ className, navItems }: Props) {
   return (
     <div className={clsx($["main-nav"], className)}>
       <div className={$["main-nav__inner"]}>
+
+        {/* Logo */}
+        <div className={$["main-nav__header"]}>
+          <h2 className={$["main-nav__brand"]}>책모이</h2>
+        </div>
         
         {/* Nav Items */}
         {navItems.map(({ slug, icon: Icon, shortName }) => (

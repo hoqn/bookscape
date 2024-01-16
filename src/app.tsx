@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./components/layouts/main-layout";
 import Fallback from "./fallback";
+import Provider from "./provider";
 
 function MainRouter() {
   return (
@@ -18,14 +19,18 @@ function MainRouter() {
 }
 
 export default function App() {
-  return <Suspense fallback={<Fallback />}>
-    <BrowserRouter>
+  return (
+    <Provider>
+      <Suspense fallback={<Fallback />}>
+        <BrowserRouter>
 
-      <Routes>
-        <Route path="/*" element={<MainRouter />} />
-        <Route path="/hello" element={<div>HELLO WORLD</div>} />
-      </Routes>
+          <Routes>
+            <Route path="/hello" element={<div>HELLO WORLD</div>} />
+            <Route path="/*" element={<MainRouter />} />
+          </Routes>
 
-    </BrowserRouter>
-  </Suspense>;
+        </BrowserRouter>
+      </Suspense>
+    </Provider>
+  );
 }

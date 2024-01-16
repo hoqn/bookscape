@@ -1,0 +1,32 @@
+.search-input {
+  composes: transition from global;
+  display: flex;
+  flex-flow: row nowrap;
+  clear: both;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid color-base(100);
+  box-shadow: none;
+  background-color: color-base(100);
+  font-size: 1rem;
+  line-height: 2.5rem;
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px color-base(700, .5);
+  }
+}
+
+.search-input__icon {
+  margin-left: 1rem;
+  opacity: .5;
+  line-height: inherit;
+}
+
+.search-input__input {
+  flex: 1;
+  padding: 0 .5rem;
+
+  &::placeholder {
+    opacity: .5;
+  }
+}

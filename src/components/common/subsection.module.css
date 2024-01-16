@@ -1,0 +1,29 @@
+.section {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.section__header {
+}
+
+.section__body {
+}
+
+
+
+.header {
+  composes: px-6 from global;
+}
+
+.header__title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: color-base(900);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.body {
+  composes: px-6 from global;
+
+}

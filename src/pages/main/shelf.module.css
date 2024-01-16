@@ -1,0 +1,50 @@
+.body {
+  composes: container container--responsive mx-auto from global;
+}
+
+.__menu-board-container {
+  composes: px-4 from global;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid color-base(950, .1);
+}
+
+.__menu-board {
+  composes: transition from global;
+  flex: 1;
+  max-width: 16rem;
+  min-width: 6rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: color-base(100);
+  color: color-base-contrast(100);
+  box-shadow: 
+    0 0 0 1px color-base(200),
+    0 2px 12px -4px color-base(950, .2);
+  cursor: pointer;
+
+  &:hover {
+    background-color: color-base(200);
+  }
+  
+  &:active {
+    background-color: color-base(300);
+    box-shadow: none;
+  }
+}
+
+.__menu-board__what {
+  text-align: start;
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.__menu-board__value {
+  margin-top: 1rem;
+  text-align: end;
+  font-size: 1.25rem;
+  font-weight: 700;
+}

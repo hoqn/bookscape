@@ -1,0 +1,148 @@
+@import "@/styles/base/breakpoints.css";
+
+/* === Body === */
+
+.body {
+  composes: container container--responsive mx-auto from global;
+  min-height: 100%;
+  height: 100%;
+}
+
+/* === Meta === */
+
+.meta-info {
+  composes: px-6 from global;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.meta-info__total-count {
+  color: color-base(950, .8);
+  font-size: .875rem;
+}
+
+/* === Result List === */
+
+.result-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  list-style: none;
+
+  @media (--sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (--md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (--lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* === Result Item === */
+
+.result-item {
+  display: block;
+  overflow-x: hidden;
+
+  /* &:not(:last-child)::after {
+    content: "";
+    display: block;
+    margin-left: calc(96px + 1.5rem);
+    height: 1px;
+    background-color: color-base(950, .1);
+  } */
+}
+
+.result-item__link {
+  composes: transition from global;
+  display: block;
+  height: 100%;
+  background-color: transparent;
+  
+  &:hover {
+    background-color: color-base(100);
+  }
+  
+  &:active {
+    background-color: color-base(200);
+  }
+}
+
+.result-item__inner {
+  composes: px-6 from global;
+  display: flex;
+  flex-flow: row;
+}
+
+.result-item__left {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.result-item__right {
+  flex: 1;
+  padding: 1rem 0 1rem .5rem;
+  overflow: hidden;
+}
+
+.result-item__img {
+  min-width: 96px;
+  max-width: 96px;
+  width: 96px;
+  height: 144px;
+  border-radius: .5rem;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px color-base(950, .1),
+    0 0 12px -4px rgb(var(--darkest) /.2);
+}
+
+.result-item__title {
+  font-size: 1rem;
+  font-weight: 700;
+
+  strong {
+    background-color: color-primary(500, .2);
+  }
+}
+
+.result-item__meta {
+  margin-top: .5rem;
+  color: color-base(900);
+  font-size: .875rem;
+  
+  >p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  strong {
+    background-color: color-primary(500, .2);
+  }
+}
+
+.load-more {
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.load-more__indicator {
+  font-size: 1.5rem !important;
+
+  @media (--sm) {
+    font-size: 1.75rem !important;
+  }
+
+  @media (--md) {
+    font-size: 2rem !important;
+  }
+}
+
+.end-of-result {
+  padding: 1rem .5rem;
+  text-align: center;
+  font-size: .875rem;
+}

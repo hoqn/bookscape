@@ -1,0 +1,73 @@
+.loading-indicator {
+  /* Font Size에 맞춰 크기 조정 */
+  font-size: 3rem;
+  /* Color에 맞춰 색 조정 */
+  color: inherit;
+
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+
+  animation: infinite linear rotate 4.2s;
+}
+
+.loading-indicator div {
+  position: absolute;
+  inset: .15em;
+  animation: infinite spin 1.5s, 1s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    width: .125em;
+    height: .125em;
+    display: block;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+  
+  &:nth-child(1) {
+    rotate: 0deg;
+    opacity: 1;
+    animation-delay: -0.30s;
+  }
+  &:nth-child(2) {
+    rotate: -22deg;
+    opacity: .92;
+    animation-delay: -0.24s;
+  }
+  &:nth-child(3) {
+    rotate: -44deg;
+    opacity: .84;
+    animation-delay: -0.18s;
+  }
+  &:nth-child(4) {
+    rotate: -66deg;
+    opacity: .76;
+    animation-delay: -0.12s;
+  }
+  &:nth-child(5) {
+    rotate: -88deg;
+    opacity: .68;
+    animation-delay: -0.06s;
+  }
+  &:nth-child(6) {
+    rotate: -110deg;
+    opacity: .60;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  10%   { transform: rotate(0deg); }
+  90% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
